@@ -1,0 +1,30 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.container{
+    height: 800px;
+    width: 100%;
+}
+.header{
+    height: 56px;
+}
+.content{
+    height: 100%;
+   width: 100%;
+    background-color: white;
+}
+.content > .row li{
+    list-style: none;
+}
+.content > .row ul{
+    line-height: 35px;
+}
+.footer{
+    height: 272px;
+}
+.container-fluid a{
+    list-style: none;
+    list-style-type: none;
+    color: black;
+}
