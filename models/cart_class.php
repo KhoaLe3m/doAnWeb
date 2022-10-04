@@ -1,5 +1,5 @@
 <?php
-class CartItem
+class CartClass
 {
     private $user_id;
     private $product_id;
