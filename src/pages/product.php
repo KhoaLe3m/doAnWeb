@@ -1,11 +1,8 @@
 <?php
-    $filepath = realpath(dirname(__FILE__));
-    require_once('../modules/session.php');
-    
-    Session ::checkLogin();
-    require_once("../modules/database.php");
-    
-    require_once('../modules/format.php');
+   
+   
+   include '../../modules/database.php';
+   include '../../modules/format.php';
    
 ?>
 <?php
@@ -22,6 +19,15 @@
         {
             
             $query = "SELECT * FROM tbl_product ";
+            $result = $this->db->select($query);
+           
+            return $result;
+            
+        }
+        public function getproduct_new()
+        {
+            
+            $query = "SELECT * FROM tbl_product order by product_id desc limit 4 ";
             $result = $this->db->select($query);
            
             return $result;

@@ -11,7 +11,7 @@
         $user_phone = $_POST['user_phone'];
         $user_name = $_POST['user_name'];
         $user_address = $_POST['user_address'];
-        $insertUser = $class->insert_user1($user_email,$user_password,$user_phone,$user_name, $user_address);
+        $insertUser = $class->insert_user($user_email,$user_password,$user_phone,$user_name, $user_address);
     }
 ?>
 <!DOCTYPE html>
