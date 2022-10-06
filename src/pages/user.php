@@ -57,8 +57,7 @@
                  VALUES('$user_email','$user_password','$user_phone','$user_name','$user_address')";
                  $result = $this->db->insert($query);
                  if($result){
-                    $alert = "<span class = 'success'>User created successfully</span>";
-                return $alert;
+                    header('Location:login.php');
                  } else{
                     $alert = "<span class = 'error'>User created not successfully</span>";
                 return $alert;
