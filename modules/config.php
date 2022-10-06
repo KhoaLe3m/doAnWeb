@@ -2,5 +2,5 @@
 define("HOST","localhost");
 define("USERNAME","root");
 define("PASSWORD","");
-define("DB_NAME","webbanhang");
+define("DB_NAME1","webbanhang");
 ?>
