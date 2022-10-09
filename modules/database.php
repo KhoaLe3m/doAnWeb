@@ -7,7 +7,7 @@ Class Database{
 public $host = HOST;
 public $user = USERNAME;
 public $pass = PASSWORD;
-public $dbname = DB_NAME;
+public $dbname = DB_NAME1;
 
 public $link;
 public $error;

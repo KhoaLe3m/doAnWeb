@@ -1,5 +1,5 @@
 <?php
-  include '../components/header.php';
+   include '../src/components/header.php';
  ?>
 <div class="content">
         
@@ -120,6 +120,5 @@
         </div>
       </div>
 <?php
-  
-  include '../components/footer.php';
+  include '../src/components/footer.php';
  ?>     

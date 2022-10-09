@@ -1,5 +1,6 @@
 <?php
-  include '../../modules/session.php';
+  include '../modules/session.php';
+  
   Session::init();
 ?>
 

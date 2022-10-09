@@ -1,10 +1,10 @@
 <?php
-    include '../../modules/session.php';
+    include '../modules/session.php';
     
     Session ::checkLogin();
     
-    include '../../modules/database.php';
-    include '../../modules/format.php';
+    include '../modules/database.php';
+    include '../modules/format.php';
     
 ?>
 <?php

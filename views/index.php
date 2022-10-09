@@ -1,5 +1,7 @@
  <?php
-  include '../components/header.php';
+
+ include '../src/components/header.php';
+  
   include 'product.php';
   
  ?>
@@ -9,7 +11,7 @@
 
     <div class="content">
     <?php
-    include '../components/slider.php';
+    include '../src/components/slider.php';
     ?>
       <div class="row">
         <div class="col-sm-12 ">
@@ -77,5 +79,5 @@
     </div>
 <?php
   
-  include '../components/footer.php';
+  include '../src/components/footer.php';
  ?>   
