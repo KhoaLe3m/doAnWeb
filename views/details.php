@@ -12,13 +12,12 @@ Session::init();
 
         <title>web-ban-giay</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="style_cuong.css">
-
+        <link rel="stylesheet" type="text/css" href="../styles/style_khoa.css">
         <link rel="stylesheet" href="../styles/vendors/font-awesome/css/font-awesome.min.css">
     </head>
 
     <body>
-        <div class="container-fluid">
+        <div class="container-fluid container1">
             <div id="header">
                 <header>
                     <div class="row">
@@ -82,59 +81,55 @@ Session::init();
                 ?>
             </main>
             <div id="footer">
-                <footer class="text-center text-lg-start bg-light text-muted ">
-                    <section class="">
-                        <div class=" text-center text-md-start mt-5 pt-2">
-                            <div class="row mt-3">
-
-                                <div class="col-md-4 col-lg-2 col-xl-2 mx-auto mb-4">
-
-                                    <h6 class="text-uppercase fw-bold mb-4">
-                                        Products
-                                    </h6>
-                                    <p>
-                                        <a href="adidas.php" class="text-reset">Adidas</a>
-                                    </p>
-                                    <p>
-                                        <a href="nike.php" class="text-reset">Nike</a>
-                                    </p>
-                                    <p>
-                                        <a href="jordan.php" class="text-reset">Jordan</a>
-                                    </p>
-                                    <p>
-                                        <a href="yeezy.php" class="text-reset">Yeezy</a>
-                                    </p>
-                                </div>
-                                <div class="col-md-4 col-lg-2 col-xl-2 mx-auto mb-4">
-                                    <h6 class="text-uppercase fw-bold mb-4">
-                                        Useful links
-                                    </h6>
-                                    <p>
-                                        <a href="#" class="text-reset">Pricing</a>
-                                    </p>
-                                    <p>
-                                        <a href="#" class="text-reset">Settings</a>
-                                    </p>
-                                    <p>
-                                        <a href="#" class="text-reset">Orders</a>
-                                    </p>
-                                    <p>
-                                        <a href="#" class="text-reset">Help</a>
-                                    </p>
-                                </div>
-                                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                                    <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-                                    <p><i class="fa fa-home" aria-hidden="true"></i> Ho Chi Minh, VN</p>
-                                    <p>
-                                        <i class="fa fa-envelope me-3"></i>
-                                        shopgiay@gmail.com
-                                    </p>
-                                    <p><i class="fa fa-phone me-3"></i> + 01 900 100 89</p>
-                                    <p><i class="fa fa-print me-3"></i> + 01 234 567 89</p>
-                                </div>
+                <footer class="text-center text-lg-start bg-light text-muted d-block">
+                    <div class=" text-center text-md-start mt-5 pt-2">
+                        <div class="row mt-3">
+                            <div class="col-md-4 col-lg-2 col-xl-2 mx-auto mb-4">
+                                <h6 class="text-uppercase fw-bold mb-4">
+                                    Products
+                                </h6>
+                                <p>
+                                    <a href="adidas.php" class="text-reset">Adidas</a>
+                                </p>
+                                <p>
+                                    <a href="nike.php" class="text-reset">Nike</a>
+                                </p>
+                                <p>
+                                    <a href="jordan.php" class="text-reset">Jordan</a>
+                                </p>
+                                <p>
+                                    <a href="yeezy.php" class="text-reset">Yeezy</a>
+                                </p>
+                            </div>
+                            <div class="col-md-4 col-lg-2 col-xl-2 mx-auto mb-4">
+                                <h6 class="text-uppercase fw-bold mb-4">
+                                    Useful links
+                                </h6>
+                                <p>
+                                    <a href="#" class="text-reset">Pricing</a>
+                                </p>
+                                <p>
+                                    <a href="#" class="text-reset">Settings</a>
+                                </p>
+                                <p>
+                                    <a href="#" class="text-reset">Orders</a>
+                                </p>
+                                <p>
+                                    <a href="#" class="text-reset">Help</a>
+                                </p>
+                            </div>
+                            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                                <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+                                <p><i class="fa fa-home" aria-hidden="true"></i> Ho Chi Minh, VN</p>
+                                <p>
+                                    <i class="fa fa-envelope me-3"></i>
+                                    shopgiay@gmail.com
+                                </p>
+                                <p><i class="fa fa-phone me-3"></i> + 01 900 100 89</p>
+                                <p><i class="fa fa-print me-3"></i> + 01 234 567 89</p>
                             </div>
                         </div>
-                    </section>
+                    </div>
                 </footer>
             </div>
         </div>

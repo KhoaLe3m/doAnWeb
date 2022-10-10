@@ -2,16 +2,12 @@
     padding: 0px;
     margin: 0px;
 }
-.container{
-    height: 800px;
-    width: 100%;
-}
+
 .header{
     height: 56px;
 }
 .content{
-    height: 100%;
-   width: 100%;
+    width: 100%;
     background-color: white;
 }
 .content > .row li{
@@ -20,11 +16,27 @@
 .content > .row ul{
     line-height: 35px;
 }
-.footer{
-    height: 272px;
+.container1{
+    min-height: 100%;
+    display: block;
+    position: relative;
+    padding-bottom: 272px; /* height of your footer */
+    width: 100%; 
 }
 .container-fluid a{
     list-style: none;
     list-style-type: none;
     color: black;
+}
+.text-10{
+    font-size: 20px;
+}
+.custom-size{
+    width: 10% !important;
+}
+#footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 }

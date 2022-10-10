@@ -32,7 +32,7 @@
                   src="<?php echo $result['product_thumnail'] ?>"
                   class="card-img-top" alt="...">
                 <div class="card-body">
-                  <h5 class="card-title"><?php echo $result['product_name'] ?></h5>
+                  <h5 class="card-title" ><a href="details.php?product_id=<?= $result['product_id'] ?>"><?php echo $result['product_name'] ?></a></h5>
                   <p class="price"><?php echo $result['product_price']." "."VNĐ" ?></p>
                 </div>
               </div>

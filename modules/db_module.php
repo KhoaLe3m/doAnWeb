@@ -2,6 +2,7 @@
 
 require_once "config.php";
 
+
 function taoKetNoi(&$link)
 {
     $link = mysqli_connect(HOST, USERNAME, PASSWORD, DB_NAME1);
@@ -9,6 +10,7 @@ function taoKetNoi(&$link)
         echo "Lỗi kết nối đến máy chủ: " . mysqli_connect_error();
         exit();
     }
+    mysqli_set_charset($link,"utf8");
 }
 
 function chayTruyVanTraVeDL($link, $q)

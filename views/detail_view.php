@@ -1,8 +1,19 @@
+<?php
+$p_id = $product->get_product_id();
+$p_name = $product->get_product_name();
+$p_price = $product->get_product_price();
+$p_thumnail = $product->get_product_thumnail();
+$p_size = $product->get_product_size();
+$p_producer = $product->get_product_producer();
+$p_maintenance = $product->get_product_maintenance();
+$p_preview = $product->get_product_preview();
+$arr_preview    = explode(";", $p_preview);
+?>
 <div class="row">
   <div class="col-md-1">
   </div>
   <div class="col-md-10">
-    <div class="ml-5 row mt-3"><a href=""><i class="fa fa-home" aria-hidden="true"></i> Trang chủ </a> <span class="ml-1">/</span> <a class="ml-1" href="">sản phẩm nika</a></div>
+    <div class="ml-5 row mt-3"><a href="index.php"><i class="fa fa-home" aria-hidden="true"></i> Trang chủ </a> <span class="ml-1">/</span> <a class="ml-1" href="">Sản Phẩm <?= $p_producer ?></a></div>
     <div class="row">
       <article class="col-sm-12">
         <div class="row">
@@ -14,15 +25,17 @@
                 <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
               </ol>
               <div class="carousel-inner block">
-                <div class="carousel-item active">
-                  <img src="https://myshoes.vn/image/cache/catalog/nike/25.10/giay-Nike-Renew-Retaliation-TR-2-01-550x550.jpg" class=" w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="https://myshoes.vn/image/cache/catalog/nike/25.10/giay-Nike-Renew-Retaliation-TR-2-06-550x550.jpg" class=" w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="https://myshoes.vn/image/cache/catalog/nike/25.10/giay-Nike-Renew-Retaliation-TR-2-02-550x550.jpg" class=" w-100" alt="...">
-                </div>
+                <?php for ($i = 0; $i < count($arr_preview); $i++) : ?>
+                  <?php if ($i == 0) : ?>
+                    <div class="carousel-item active">
+                      <img src="<?= $arr_preview[$i] ?>" class=" w-100" alt="...">
+                    </div>
+                  <?php else : ?>
+                    <div class="carousel-item">
+                      <img src="<?= $arr_preview[$i] ?>" class=" w-100" alt="...">
+                    </div>
+                  <?php endif; ?>
+                <?php endfor; ?>
               </div>
               <button class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -36,26 +49,38 @@
           </div>
           <div class="col-sm-7 block">
             <ul>
-              <li class="font-weight-bold mt-3  ">
-                <h4>GIÀY NIKE FREE METCON 4 NAM - ĐEN TRẮNG</h4>
+              <li class="font-weight-bold mt-3">
+                <h2><?= $p_name ?></h2>
               </li>
-              <li>Đơn giá: $100</li>
-              <li>Nhà cung cấp: Nike</li>
-              <li>Số lượng còn lại: 5</li>
-              <li>Giảm giá: 5%</li>
-              <li>Chọn size nam</li>
-              <li> <button class="btn border">42</button> <button class="btn border">43 </button> <button class="btn border">44</button></li>
+              <h4 style="color: red;"><?= number_format((int)$p_price, 0, ",", ",") . " VNĐ" ?></h4>
+              <li>
+                <span>Nhà Cung Cấp: <span class="text-10"><?= $p_producer ?></span></span>
+              </li>
+              <li>Bảo hành: <?= $p_maintenance . " Ngày" ?></li>
+              <li>Chọn size:
+                <select class="custom-select custom-size" name="size" id="product_size">
+                  <option value="37">37</option>
+                  <option value="38">38</option>
+                  <option value="39">39</option>
+                  <option value="40">40</option>
+                  <option value="41">41</option>
+                  <option value="42">42</option>
+                </select>
+              </li>
+
               <li>+ <a href="">Hướng dẫn chọn size</a></li>
               <li>
                 <label for="">Nhập số lượng </label>
-                <input type="number" class="rounded-lg border" name="">
+                <input type="number" class="rounded-lg border" name="quantity_product" id="quantity_product">
                 <br>
               </li>
-              <li><button class="btn btn-danger mr-5"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Mua
-                  Hàng Ngay</button>
-                <button class="btn btn-success w-auto"><i class="fa fa-phone" aria-hidden="true"></i> Gọi
-                  điện</button>
-              </li>
+              <form action="add_to_cart.php" method="GET">
+                <input type="hidden" name="product_id" value="<?= $p_id ?>" />
+                <button type="submit" class="btn btn-danger">
+                  <i class="fa fa-shopping-cart"></i>
+                  Thêm vào giỏ hàng
+                </button>
+              </form>
             </ul>
           </div>
         </div>

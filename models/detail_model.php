@@ -1,5 +1,5 @@
 <?php
-require_once "product.php";
+require_once "product_class.php";
 require_once "review.php";
 require_once($_SERVER['DOCUMENT_ROOT'] . "/webUeh/modules/db_module.php");
 class DetailModel
@@ -12,11 +12,7 @@ class DetailModel
         $result = chayTruyVanTraVeDL($link, $query);
         while ($rows = mysqli_fetch_assoc($result)) 
         {
-            $product_name = $rows['product_name'];
-            $product_price = $rows['product_price'];
-            $product_thumnail = $rows['product_thumnail'];
-            $product_maintenance = $rows['product_maintenance'];
-            $product = [$product_name,$product_price,$product_thumnail,$product_maintenance];
+            $product = new ProductClass($rows['product_id'],$rows['product_name'],$rows['product_size'],$rows['product_price'],$rows['product_preview'],$rows['product_thumnail'],$rows['product_maintenance'],$rows['product_producer'],$rows['category_id']);
         }
         giaiPhongBoNho($link, $result);
         return $product;
