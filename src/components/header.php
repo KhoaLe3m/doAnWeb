@@ -47,13 +47,10 @@
                       </li>
                     </ul>
                     <form class="form-inline my-2 my-lg-0">
-                      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                      <btn class="block btn"><i class="fa fa-search" aria-hidden="true"></i></btn>
+                      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search";>
+                      <btn class="block btn"><i class="fa fa-search" aria-hidden="true" type="submit"></i></btn>
                     </form>
                     <ul class="ml-3 navbar-nav">
-                      
-                    
-                
                     <?php 
                       if(isset($_GET['action'])&& $_GET['action']=='logout'){
                         Session::destroy();

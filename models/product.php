@@ -25,8 +25,13 @@
             $result = $this->db->select($query);
            
             return $result;
-            
         }
-        
+        public function getproduct_adidas(){
+            $query2 = "SELECT * FROM tbl_product ";
+            $result = $this->db->select($query2);
+            return $result;
+        }
+    
     }
+    
 ?>
