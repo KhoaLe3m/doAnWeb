@@ -4,6 +4,7 @@
  ?>
  <?php
  $product = new search_model(); 
+ $text = $_GET["keyword"];
  ?>
  <head>
         <meta charset="UTF-8">
@@ -11,13 +12,19 @@
         <title>web-ban-giay</title>
         <link rel="stylesheet" type="text/css" href="../styles/style_sang.css">
   </head>
+  <div>
+    <select id="sort-box" onchange = "this.options[this.selectedIndex].value && (window.location = this. options[this.selectedIndex].value)">
+      <option value="">Mac Dinh</option>
+      <option value="">Cao Den Thap</option>
+      <option value="">Thap Den Cao</option>
+    </select>
+  </div>
     <div class="content">
-      <h2 class = "test">testcss</h2>
       <div class="row">
         <div class="col-sm-12 ">
           <div class="row">
           <?php
-            $product_new = $product->GetNike();
+            $product_new = $product->Search($text);
               while($result = mysqli_fetch_assoc($product_new)){
             ?>
             <div class ="col-12 col-sm-6 col-md-3 ">

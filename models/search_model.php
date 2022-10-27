@@ -47,12 +47,24 @@ class search_model{
     }
     public function SortPrice()
     {   
+        #
+    }
+    public function Search($text){
+        if (isset($_GET['keyword'])){//all keywword
+
         $link = null;
         taoKetNoi($link);
-        $producer = "Yezzy";
-        $query = "SELECT * FROM tbl_product WHERE product_producer='$producer'";
+        $query = "SELECT * FROM tbl_product WHERE product_name LIKE '%".$text."%'";
         $result = chayTruyVanTraVeDL($link, $query);
-
+        return $result;}
+        else//all product
+        {
+        $link = null;
+        taoKetNoi($link);
+        $query = "SELECT * FROM tbl_product WHERE product_name LIKE '%".$text."%'";
+        $result = chayTruyVanTraVeDL($link, $query);
+        return $result;
+        }
     }
 }
 ?>

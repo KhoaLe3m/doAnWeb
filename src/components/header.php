@@ -46,10 +46,15 @@
                         <a class="nav-link" href="yeezy.php">Yeezy <span class="sr-only">(current)</span></a>
                       </li>
                     </ul>
-                    <form class="form-inline my-2 my-lg-0">
-                      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search";>
-                      <btn class="block btn"><i class="fa fa-search" aria-hidden="true" type="submit"></i></btn>
+                    <form class="form-inline my-2 my-lg-0" id = "myform" action = "search.php">
+                      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id = textsearch name = "keyword";>
+                      <btn class="block btn"><i class="fa fa-search" aria-hidden="true" type="submit" onclick ="submitform()"></i></btn>
                     </form>
+                     <script>
+                      function submitform(){
+                        document.getElementById('myform').submit();
+                      }
+                     </script>
                     <ul class="ml-3 navbar-nav">
                     <?php 
                       if(isset($_GET['action'])&& $_GET['action']=='logout'){
