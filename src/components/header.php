@@ -1,7 +1,9 @@
 <?php
-  include '../modules/session.php';
   
-  Session::init();
+  include '../controllers/user_controller.php';
+  
+  UserController::init();
+  
 ?>
 
 <!DOCTYPE php>
@@ -58,11 +60,11 @@
                     <ul class="ml-3 navbar-nav">
                     <?php 
                       if(isset($_GET['action'])&& $_GET['action']=='logout'){
-                        Session::destroy();
+                        UserController::destroy();
                       }
                     ?>
                       <li class="nav-item active ">
-                        <a class="mr-2 nav-link" href="?action=logout"><i class="fa fa-sign-in" aria-hidden="true"></i> <?php echo Session::checkSign() ?> <span
+                        <a class="mr-2 nav-link" href="?action=logout"><i class="fa fa-sign-in" aria-hidden="true"></i> <?php echo UserController::checkSign() ?> <span
                             class="sr-only">(current)</span></a>
                       </li>
                     

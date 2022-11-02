@@ -1,7 +1,7 @@
 <?php
-    include '../modules/session.php';
     
-    Session ::checkLogin();
+    include'../controllers/user_controller.php';
+    UserController::checkLogin();
     
     include '../modules/database.php';
     include '../modules/format.php';
@@ -28,11 +28,11 @@
             $result = $this->db->select($query);
             if($result != false){
                 $value = $result->fetch_assoc();
-                Session::set('userlogin',true);
-                Session::set('userid',$value['user_id']);
-                Session::set('userphone',$value['user_phone']);
-                Session::set('username',$value['user_name']);
-                Session::set('useraddress',$value['user_address']);
+                UserController::set('userlogin',true);
+                UserController::set('userid',$value['user_id']);
+                UserController::set('userphone',$value['user_phone']);
+                UserController::set('username',$value['user_name']);
+                UserController::set('useraddress',$value['user_address']);
                 header('Location:index.php');
             } else {
                 $alert = "email or password not match";

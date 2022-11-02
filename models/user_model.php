@@ -1,25 +1,28 @@
 <?php
-    include '../modules/session.php';
+    include '../controllers/user_controller.php';
+    UserController ::checkLogin();
     
-    Session ::checkLogin();
     
     include '../modules/database.php';
     include '../modules/format.php';
-    include '../models/user.php'
+    include 'user_model.php';
     
 ?>
 <?php
-     class UserController
+     class User_Model
      {
         private $db;
         private $fm;
+        private $user;
         public function __construct()
         {
             $this->db = new Database();
             $this->fm = new Format();
+            $this->user = new User();
         }
         public function login_user($userEmail,$userPass)
         {
+            
             $userEmail = $this->fm->validation($userEmail);
             $userPass = $this->fm->validation($userPass);
             $userEmail = mysqli_real_escape_string($this->db->link,$userEmail);
@@ -29,11 +32,11 @@
             $result = $this->db->select($query);
             if($result != false){
                 $value = $result->fetch_assoc();
-                Session::set('userlogin',true);
-                Session::set('userid',$value['user_id']);
-                Session::set('userphone',$value['user_phone']);
-                Session::set('username',$value['user_name']);
-                Session::set('useraddress',$value['user_address']);
+                UserController::set('userlogin',true);
+                UserController::set('userid',$value['user_id']);
+                UserController::set('userphone',$value['user_phone']);
+                UserController::set('username',$value['user_name']);
+                UserController::set('useraddress',$value['user_address']);
                 header('Location:index.php');
             } else {
                 $alert = "email or password not match";

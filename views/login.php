@@ -1,5 +1,5 @@
 <?php
-   
+    
     include "user.php";
 ?>
 <?php
@@ -11,6 +11,7 @@
         $userEmail = $_POST['email'];
         $userPass = md5($_POST['password']);
         $login_check = $class->login_user($userEmail,$userPass);
+        
     }
     
 ?>

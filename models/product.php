@@ -1,8 +1,7 @@
 <?php
-    $filepath = realpath(dirname(__FILE__));
-    require_once('../modules/session.php');
+    require_once('../controllers/user_controller.php');
+    UserController ::checkLogin();
     
-    Session ::checkLogin();
     require_once("../modules/database.php");
     
     require_once('../modules/format.php');
