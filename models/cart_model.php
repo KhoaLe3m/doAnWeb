@@ -2,7 +2,7 @@
 require_once "cart_class.php";
 require_once "order_class.php";
 require_once "product.php";
-require_once($_SERVER['DOCUMENT_ROOT']."/modules/db_module.php");
+require_once "../modules/db_module.php";
 class Cart_Model{
     public function getCartItem($user_id){
         $link = null;

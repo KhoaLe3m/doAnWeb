@@ -1,4 +1,5 @@
 <?php
+include "../src/components/header.php";
 if (count($cart_items) <= 0)
 {
     echo "<p>Chưa có mặt hàng nào trong giỏ!</p>";
@@ -60,4 +61,5 @@ else
     </form>
     ';
 }
+include "../src/components/footer.php";
 ?>

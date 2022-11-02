@@ -1,6 +1,7 @@
 <?php 
-require_once($_SERVER['DOCUMENT_ROOT']."/models/cart_class.php");
-require_once($_SERVER['DOCUMENT_ROOT']."/models/cart_model.php");
+require_once("../models/cart_class.php");
+require_once("../models/cart_model.php");
+
 class CartController{
     private $model;
     public function __construct(){

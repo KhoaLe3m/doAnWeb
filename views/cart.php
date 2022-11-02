@@ -73,11 +73,9 @@ Session::init();
             </div>
             <main class="content dynamic-container row">
                 <?php
-                if (isset($_GET['product_id'])) {
-                    require_once "../controllers/detail_controller.php";
-                    $controller = new DetailController();
-                    $controller->product_detail_invoke($_GET['product_id']);
-                }
+                    require_once "../controllers/cart_controller.php";
+                    $controller = new CartController();
+                    $controller->getCartItems(Session::get("user_id"));
                 ?>
             </main>
             <div id="footer">
