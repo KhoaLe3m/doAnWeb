@@ -39,6 +39,29 @@
                 return $alert;
             }
         }
+        public function login_admin($adminEmail,$Pass)
+        {
+            
+            $adminEmail = $this->fm->validation($adminEmail);
+            $Pass = $this->fm->validation($Pass);
+            $adminEmail = mysqli_real_escape_string($this->db->link,$adminEmail);
+            $Pass = mysqli_real_escape_string($this->db->link,$Pass);
+            
+            $query = "SELECT * FROM tbl_user WHERE user_email='$adminEmail' AND user_password = '$Pass' AND user_id = 1 ";
+            $result = $this->db->select($query);
+            if($result != false){
+                $value = $result->fetch_assoc();
+                UserController::set('adlogin',true);
+                UserController::set('userid',$value['user_id']);
+                UserController::set('userphone',$value['user_phone']);
+                UserController::set('username',$value['user_name']);
+                UserController::set('useraddress',$value['user_address']);
+                header('Location:index.php');
+            } else {
+                $alert = "email or password not match";
+                return $alert;
+            }
+        }
         
         public function insert_user($user_email,$user_password,$user_phone,$user_name, $user_address){
             $user_email = mysqli_real_escape_string($this->db->link,$user_email);

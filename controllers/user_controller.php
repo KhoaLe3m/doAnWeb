@@ -3,7 +3,7 @@
 class UserController{
     public static function checkSession(){
         self::init();
-        if (self::get("userlogin")== false) {
+        if (self::get("adlogin")== false) {
         self::destroy();
         header("Location:login.php");
         }
@@ -24,6 +24,7 @@ class UserController{
         session_destroy();
         header("Location:login.php");
         }
+        
 
     public static function init(){
         if (version_compare(phpversion(), '5.4.0', '<')) {

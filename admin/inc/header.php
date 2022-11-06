@@ -1,4 +1,11 @@
 <?php
+  
+  include '../controllers/user_controller.php';
+  
+  UserController::init();
+  UserController::checkSession();
+?>
+<?php
   header("Cache-Control: no-cache, must-revalidate");
   header("Pragma: no-cache"); 
   header("Expires: Sat, 26 Jul 1997 05:00:00 GMT"); 
@@ -44,8 +51,8 @@
                     <img src="img/livelogo.png" alt="Logo" />
 				</div>
 				<div class="floatleft middle">
-					<h1>Training with live project</h1>
-					<p>www.trainingwithliveproject.com</p>
+					<h1>Trang quản lý</h1>
+					<p>www.giay.com</p>
 				</div>
                 <div class="floatright">
                     <div class="floatleft">
@@ -53,7 +60,12 @@
                     <div class="floatleft marginleft10">
                         <ul class="inline-ul floatleft">
                             <li>Hello Admin</li>
-                            <li><a href="#">Logout</a></li>
+                            <?php
+                            if(isset($_GET['action'])&& $_GET['action']=='logout'){
+                                UserController::destroy();
+                              }
+                            ?>
+                            <li><a href="?action=logout">Logout</a></li>
                         </ul>
                     </div>
                 </div>
