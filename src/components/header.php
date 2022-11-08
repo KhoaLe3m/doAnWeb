@@ -48,7 +48,7 @@
                         <a class="nav-link" href="yeezy_view.php">Yeezy <span class="sr-only">(current)</span></a>
                       </li>
                     </ul>
-                    <form class="form-inline my-2 my-lg-0" id = "myform" action = "search.php">
+                    <form class="form-inline my-2 my-lg-0" id = "myform" action = "search_view.php">
                       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id = textsearch name = "keyword";>
                       <btn class="block btn"><i class="fa fa-search" aria-hidden="true" type="submit" onclick ="submitform()"></i></btn>
                     </form>
