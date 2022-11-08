@@ -15,7 +15,7 @@
         <link rel="stylesheet" type="text/css" href="../styles/style_sang.css">
   </head>
   <div>
-    <h5>Kết quả tìm kiếm cho từ khóa: "
+    <h5 style = " padding-top : 10px">Kết quả tìm kiếm cho từ khóa: "
     <?php
     echo $_GET["keyword"];
     ?>" 
