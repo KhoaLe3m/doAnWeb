@@ -35,6 +35,12 @@
                         <li><a href="productlist.php">Product List</a> </li>
                     </ul>
                 </li>
+                <li><a class="menuitem">User Profile</a>
+                    <ul class="submenu">
+                        <li><a href="useradd.php">Add User</a> </li>
+                        <li><a href="userprofile.php">User List</a> </li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </div>
