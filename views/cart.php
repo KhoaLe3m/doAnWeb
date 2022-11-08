@@ -54,14 +54,14 @@ Session::init();
                                                     Session::destroy();
                                                 }
                                                 ?>
+                                                <li class="nav-item active" style="padding-top: 5px;">
+                                                    <a class="nav-link" href="cart_invoke.php"><i class="fa fa-shopping-cart" aria-hidden="true"></i> <span class="sr-only">(current)</span></a>
+                                                </li>
                                                 <li class="nav-item active ">
                                                     <a class="mr-2 nav-link" href="?action=logout"><i class="fa fa-sign-in" aria-hidden="true"></i> <?php echo Session::checkSign() ?> <span class="sr-only">(current)</span></a>
                                                 </li>
 
 
-                                                <li class="nav-item active">
-                                                    <a class="nav-link" href="cart_invoke.php"><i class="fa fa-shopping-cart" aria-hidden="true"></i> <span class="sr-only">(current)</span></a>
-                                                </li>
                                             </ul>
                                         </div>
                                     </nav>

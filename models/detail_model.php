@@ -1,7 +1,7 @@
 <?php
 require_once "product_class.php";
 require_once "review.php";
-require_once($_SERVER['DOCUMENT_ROOT'] . "/webUeh/modules/db_module.php");
+require_once "../modules/db_module.php";
 class DetailModel
 {
     public function getProduct($id)

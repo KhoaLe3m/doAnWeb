@@ -3,7 +3,6 @@ $p_id = $product->get_product_id();
 $p_name = $product->get_product_name();
 $p_price = $product->get_product_price();
 $p_thumnail = $product->get_product_thumnail();
-$p_size = $product->get_product_size();
 $p_producer = $product->get_product_producer();
 $p_maintenance = $product->get_product_maintenance();
 $p_preview = $product->get_product_preview();
@@ -28,7 +27,7 @@ $arr_preview    = explode(";", $p_preview);
                 <?php for ($i = 0; $i < count($arr_preview); $i++) : ?>
                   <?php if ($i == 0) : ?>
                     <div class="carousel-item active">
-                      <img src="<?= $arr_preview[$i] ?>" class=" w-100" alt="...">
+                      <img src="<?= $p_thumnail ?>" class=" w-100" alt="...">
                     </div>
                   <?php else : ?>
                     <div class="carousel-item">

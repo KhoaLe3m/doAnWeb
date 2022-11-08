@@ -36,7 +36,7 @@
                 }
                 ?>
                 <input type="text" id="user-name" class="form-control" placeholder="Full name" required="" autofocus="" name="user_name">
-                <input type="email" id="user-email" class="form-control" placeholder="Email address" required autofocus="" name="user_email">
+                <input type="email" id="user-email" class="form-control" placeholder="Email " required autofocus="" name="user_email">
                 <input type="password" id="user-pass" class="form-control" placeholder="Password" required autofocus="" name="user_password">
                 <input type="text" id="user-phone" class="form-control" placeholder="Phone number" required autofocus="" name="user_phone">
                 <input type="text" id="user-address" class="form-control" placeholder="Address" required autofocus="" name="user_address">
