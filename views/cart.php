@@ -75,7 +75,7 @@ Session::init();
                 <?php
                     require_once "../controllers/cart_controller.php";
                     $controller = new CartController();
-                    $controller->getCartItems(Session::get("user_id"));
+                    $controller->getCartItems(Session::get("userid"));
                 ?>
             </main>
             <div id="footer">

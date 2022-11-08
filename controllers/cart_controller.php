@@ -14,9 +14,9 @@ class CartController{
     public function getProduct($product_id){
         $product = $this->model->getProducts($product_id);
     }
-    public function addProductToCart($product_id)
+    public function addProductToCart($product_id,$product_quantity)
     {
-        $this->model->addCartItem($product_id);
+        $this->model->addCartItem($product_id,$product_quantity);
     }
     // public function purchase($user_id)
     // {

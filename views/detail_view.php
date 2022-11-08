@@ -57,25 +57,13 @@ $arr_preview    = explode(";", $p_preview);
                 <span>Nhà Cung Cấp: <span class="text-10"><?= $p_producer ?></span></span>
               </li>
               <li>Bảo hành: <?= $p_maintenance . " Ngày" ?></li>
-              <li>Chọn size:
-                <select class="custom-select custom-size" name="size" id="product_size">
-                  <option value="37">37</option>
-                  <option value="38">38</option>
-                  <option value="39">39</option>
-                  <option value="40">40</option>
-                  <option value="41">41</option>
-                  <option value="42">42</option>
-                </select>
-              </li>
-
-              <li>+ <a href="">Hướng dẫn chọn size</a></li>
+              <form action="add_to_cart.php" method="post">
               <li>
                 <label for="">Nhập số lượng </label>
-                <input type="number" class="rounded-lg border" name="quantity_product" id="quantity_product">
+                <input type="number" class="rounded-lg border" name="product_quantity" id="product_quantity">
                 <br>
               </li>
-              <form action="add_to_cart.php" method="GET">
-                <input type="hidden" name="product_id" value="<?= $p_id ?>" />
+                <input type="hidden" name="product_id" value="<?= $p_id ?>">
                 <button type="submit" class="btn btn-danger">
                   <i class="fa fa-shopping-cart"></i>
                   Thêm vào giỏ hàng
