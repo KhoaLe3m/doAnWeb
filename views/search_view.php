@@ -1,10 +1,12 @@
 <?php
   include '../src/components/header.php';
-  require_once ("../models/search_model.php");
+  require_once ("../controllers/search.php");
  ?>
  <?php
- $product = new search_model(); 
+ $product = new Search(); 
  $text = $_GET["keyword"];
+ $product_new = $product->Search();
+ $notif=true;
  ?>
  <head>
         <meta charset="UTF-8">
@@ -13,21 +15,22 @@
         <link rel="stylesheet" type="text/css" href="../styles/style_sang.css">
   </head>
   <div>
-    <select id="sort-box" onchange = "this.options[this.selectedIndex].value && (window.location = this. options[this.selectedIndex].value)">
-      <option value="">Mac Dinh</option>
-      <option value="">Cao Den Thap</option>
-      <option value="">Thap Den Cao</option>
-    </select>
+    <h5>Kết quả tìm kiếm cho từ khóa: "
+    <?php
+    echo $_GET["keyword"];
+    ?>" 
+    </h5>
+    <hr>
   </div>
     <div class="content">
       <div class="row">
         <div class="col-sm-12 ">
           <div class="row">
           <?php
-            $product_new = $product->Search($text);
+          if($product_new!=false){
               while($result = mysqli_fetch_assoc($product_new)){
-            ?>
-            <div class ="col-12 col-sm-6 col-md-3 ">
+            // ?>
+            <div class ="col-12 col-sm-6 col-md-3 "style = "padding-bottom: 20px">
               <div class="card" >
                 <img
                   src="<?php echo $result['product_thumnail'] ?>"
@@ -39,8 +42,24 @@
               </div>
             </div>
             <?php
-          }
-            ?>
+            $notif=true;
+          }}else{
+            $notif = false;
+          }           
+           ?>
+           <div style = "width: 100% ">
+            <h5>
+              <?php
+              if($notif == false)
+              {
+                echo "&nbsp &nbspKhông Tìm Thấy Sản phẩm có tên: "; 
+                echo $_GET['keyword'];
+                // echo "<hr><h5>&nbsp &nbspMột số sản phẩm khác</h5> <hr>
+                // ";
+              }
+              ?>
+            </h5>
+           </div>
           </div> 
         </div>
       </div>      
