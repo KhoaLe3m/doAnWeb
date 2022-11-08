@@ -1,5 +1,5 @@
 <?php
-class Yezzy{
+class Yeezy{
     function Sort(){
         require_once "..\models\product.php";
         $product = new product();

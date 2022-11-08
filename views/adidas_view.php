@@ -14,9 +14,15 @@
         <div class="col-sm-12 ">
             <div>
               <form action="" class = "formsort">
-                <h5 style = " padding-top : 10px">Sắp Xếp Sản Phẩm</h5> <hr>
+                <h5 style = " padding-top : 10px">Bộ Lọc Sản Phẩm</h5> <hr>
                 <input type="radio" name = "Options" id = "option" value = "DESC"> &nbsp Giá cao tới thấp &nbsp&nbsp&nbsp
                 <input type="radio" name = "Options" id = "option" value = "ASC"> &nbsp Giá thấp tới cao &nbsp&nbsp
+                <select name="selectname">
+                  <option value=" " selected="selected">Loại Giày</option>
+                  <option value="Thể Thao">Thể Thao</option>
+                  <option value="Dã ngoại" >Dã Ngoại</option>
+                  <option value="Thời Trang">Thời Trang</option>
+                </select>
                 <input type="submit" value = "Lọc" style = "padding : 0px 10px">
                 <hr>
               </form>

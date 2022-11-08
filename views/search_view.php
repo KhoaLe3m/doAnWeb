@@ -5,7 +5,8 @@
  <?php
  $product = new Search(); 
  $text = $_GET["keyword"];
- $product_new = $product->Search($text);
+ $product_new = $product->Search();
+ $notif=true;
  ?>
  <head>
         <meta charset="UTF-8">
@@ -17,7 +18,7 @@
     <h5>Kết quả tìm kiếm cho từ khóa: "
     <?php
     echo $_GET["keyword"];
-    ?>"
+    ?>" 
     </h5>
     <hr>
   </div>
@@ -26,8 +27,9 @@
         <div class="col-sm-12 ">
           <div class="row">
           <?php
+          if($product_new!=false){
               while($result = mysqli_fetch_assoc($product_new)){
-            ?>
+            // ?>
             <div class ="col-12 col-sm-6 col-md-3 "style = "padding-bottom: 20px">
               <div class="card" >
                 <img
@@ -40,8 +42,24 @@
               </div>
             </div>
             <?php
-          }
-            ?>
+            $notif=true;
+          }}else{
+            $notif = false;
+          }           
+           ?>
+           <div style = "width: 100% ">
+            <h5>
+              <?php
+              if($notif == false)
+              {
+                echo "&nbsp &nbspKhông Tìm Thấy Sản phẩm có tên: "; 
+                echo $_GET['keyword'];
+                // echo "<hr><h5>&nbsp &nbspMột số sản phẩm khác</h5> <hr>
+                // ";
+              }
+              ?>
+            </h5>
+           </div>
           </div> 
         </div>
       </div>      

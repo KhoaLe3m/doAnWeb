@@ -36,16 +36,16 @@
                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                       <li class="nav-item active">
-                        <a class="nav-link" href="adidasview.php">Adidas <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="adidas_view.php">Adidas <span class="sr-only">(current)</span></a>
                       </li>
                       <li class="nav-item active">
-                        <a class="nav-link" href="nike.php">Nike <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="nike_view.php">Nike <span class="sr-only">(current)</span></a>
                       </li>
                       <li class="nav-item active">
-                        <a class="nav-link" href="jordan.php">Jordan <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="jordan_view.php">Jordan <span class="sr-only">(current)</span></a>
                       </li>
                       <li class="nav-item active">
-                        <a class="nav-link" href="yeezy.php">Yeezy <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="yeezy_view.php">Yeezy <span class="sr-only">(current)</span></a>
                       </li>
                     </ul>
                     <form class="form-inline my-2 my-lg-0" id = "myform" action = "search.php">

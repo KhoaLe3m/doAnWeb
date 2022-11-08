@@ -58,50 +58,70 @@
             return $result;
     
         }
-        public function SortPrice($chosen)
+        public function SortPrice($chosen)//edit here
         {   
-            if(isset($_GET['Options']))
+            if(isset($_GET['Options'])||isset($_GET['selectname']))
             {
-            if($_GET['Options']=="ASC"){
-            $query = "SELECT * FROM `tbl_product` WHERE product_producer='$chosen' ORDER BY `tbl_product`.`product_price` ASC";
-            $result = $this->db->select($query);
-            return $result;}
-            else{
-            $query = "SELECT * FROM `tbl_product` WHERE product_producer='$chosen' ORDER BY `tbl_product`.`product_price` DESC";
-            $result = $this->db->select($query);
-            return $result;
+                if(isset($_GET['Options'])&&isset($_GET['selectname'])&&$_GET['selectname']!=" ")//input ca 2 ok
+                {
+                    if($_GET['Options']=="ASC"){
+                        $type= $_GET['selectname'];
+                        $query = "SELECT * FROM `tbl_product` ,`tbl_product_category` WHERE `tbl_product_category`.`category_id`=`tbl_product`.`category_id` AND `tbl_product`.`product_producer`='$chosen' AND `tbl_product_category`.`category_name`  = '$type'  ORDER BY `tbl_product`.`product_price` ASC";
+                        $result = $this->db->select($query);
+                        return $result;
+                    }
+                    else{
+                        $type= $_GET['selectname'];
+                        $query = "SELECT * FROM `tbl_product` ,`tbl_product_category` WHERE `tbl_product_category`.`category_id`=`tbl_product`.`category_id` AND `tbl_product`.`product_producer`='$chosen' AND `tbl_product_category`.`category_name`  = '$type'  ORDER BY `tbl_product`.`product_price` DESC";
+                        $result = $this->db->select($query);
+                        return $result;
+                    }
+                }
+                else//only 1
+                {
+                    if(isset($_GET['Options']))//chi options
+                    {
+                        if($_GET['Options']=="ASC"){
+                            $query = "SELECT * FROM `tbl_product` WHERE `tbl_product`.`product_producer`='$chosen' ORDER BY `tbl_product`.`product_price` ASC";
+                            $result = $this->db->select($query);
+                            return $result;
+                        }else{
+                            $query = "SELECT * FROM `tbl_product` WHERE `tbl_product`.`product_producer`='$chosen' ORDER BY `tbl_product`.`product_price` DESC";
+                            $result = $this->db->select($query);
+                            return $result;
+                        }
+                    }
+                    if(isset($_GET['selectname']))//chi select ok
+                    {
+                        $type= $_GET['selectname'];
+                        $query = "SELECT * FROM `tbl_product` ,`tbl_product_category` WHERE `tbl_product_category`.`category_id`=`tbl_product`.`category_id` AND `tbl_product`.`product_producer`='$chosen' AND `tbl_product_category`.`category_name`  = '$type'";
+                        $result = $this->db->select($query);
+                        return $result;
+                    }
+                }
             }
-            }
-            else {
-                $query = "SELECT * FROM tbl_product WHERE product_producer='$chosen'";
+            else //th chua submit data len  url ok
+            {
+                $producer = "$chosen";
+                $query = "SELECT * FROM tbl_product WHERE product_producer='$producer'";
                 $result = $this->db->select($query);
-                return $result;    
-            }
-        }
+                return $result;
+            } 
+        }           
         public function Search($text){
             if (isset($_GET['keyword'])){//all keywword
     
             $query = "SELECT * FROM tbl_product WHERE product_name LIKE '%".$text."%'";
             $result = $this->db->select($query);
-            return $result;}
+            if($result!=false)
+            {
+            return $result;}else return false;}
             else//all product
             {
             $query = "SELECT * FROM tbl_product WHERE product_name LIKE '%".$text."%'";
             $result = $this->db->select($query);
             return $result;
             }
-        }
-        public function GetCount($text){
-            if (isset($_GET['keyword'])){//all keywword
-    
-                $query = "SELECT Count(*) FROM tbl_product WHERE product_name LIKE '%".$text."%'";
-                $result = $this->db->select($query);
-                return $result;}
-                else//all product
-                {
-                return $result;
-                }
-    
         }
     }
     
