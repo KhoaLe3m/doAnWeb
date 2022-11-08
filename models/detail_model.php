@@ -10,7 +10,7 @@ class DetailModel
         taoKetNoi($link);
         $query = "SELECT * FROM tbl_product WHERE product_id='$id'";
         $result = chayTruyVanTraVeDL($link, $query);
-        while ($rows = mysqli_fetch_assoc($result)) 
+        while ($rows = mysqli_fetch_assoc($result))
         {
             $product = new ProductClass($rows['product_id'],$rows['product_name'],$rows['product_size'],$rows['product_price'],$rows['product_preview'],$rows['product_thumnail'],$rows['product_maintenance'],$rows['product_producer'],$rows['category_id']);
         }
