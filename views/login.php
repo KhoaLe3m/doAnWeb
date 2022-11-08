@@ -30,25 +30,35 @@
     <title> Login/Register Form</title>
 </head>
 <body>
-    <div class="container">
+    <div class="container" >
         <div id="logreg-forms">
             <form class="form-signin" action="login.php" method="post">
                 <h1 class="h3 mb-3 font-weight-normal" style="text-align: center"> Sign in</h1>
-                <span>
+                <span style="color:red">
                     <?php
                     if(isset($login_check)){
                         echo $login_check;
                     }
                     ?>
                 </span>
+                <div>
                 <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="" name="email">
+                </div>
+                <div>
                 <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="" name="password">
-                
+                </div>
+                <div>
                 <button class="btn btn-success btn-block" type="submit"><i class="fas fa-sign-in-alt"></i> Sign in</button>
+                </div>
+                
+                
+                
+                
                 
                 <hr>
-                
+                <div>
                 <button class="btn btn-primary btn-block" type="button" id="btn-signup"onclick="location.href='signup.php';" ><i class="fas fa-user-plus"></i> Sign up New Account</button>
+                </div>
                 </form>
                 
                 <br>
@@ -70,6 +80,9 @@
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
     }
+    #logreg-forms form div {
+    margin-bottom: 5px;
+    }
 
     </style>
     
@@ -79,3 +92,4 @@
     <script src="/script.js"></script>
 </body>
 </html>
+

@@ -35,19 +35,40 @@
                     echo $insertUser;
                 }
                 ?>
-                <input type="text" id="user-name" class="form-control" placeholder="Full name" required="" autofocus="" name="user_name">
-                <input type="email" id="user-email" class="form-control" placeholder="Email " required autofocus="" name="user_email">
-                <input type="password" id="user-pass" class="form-control" placeholder="Password" required autofocus="" name="user_password">
-                <input type="text" id="user-phone" class="form-control" placeholder="Phone number" required autofocus="" name="user_phone">
-                <input type="text" id="user-address" class="form-control" placeholder="Address" required autofocus="" name="user_address">
 
+
+                <div>
+                <input type="text" id="user-name" class="form-control" placeholder="Full name" required="" autofocus="" name="user_name">
+                </div>
+                <div>
+                <input type="email" id="user-email" class="form-control" placeholder="Email " required autofocus="" name="user_email">
+                </div>
+                <div>
+                <input type="password" id="user-pass" class="form-control" placeholder="Password" required autofocus="" name="user_password">
+                </div>
+                <div>
+                <input type="text" id="user-phone" class="form-control" placeholder="Phone number" required autofocus="" name="user_phone">
+                </div>
+                <div>
+                <input type="text" id="user-address" class="form-control" placeholder="Address" required autofocus="" name="user_address">
+                </div>
+                
+                
+                
+                
+                <div>
                 <button class="btn btn-primary btn-block" type="submit"><i class="fas fa-user-plus"></i> Sign Up</button>
+                </div>
+                
                 
             </form>
             <br>
             
     </div>
     <style>
+        .error{
+            color: red;
+        }
         #logreg-forms form {
     width: 100%;
     max-width: 410px;
@@ -60,6 +81,9 @@
     background-color:#f3f3f3;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    }
+     #logreg-forms form div {
+    margin-bottom: 5px;
     }
 
     </style>

@@ -47,13 +47,14 @@
        <h2>Feature Product</h2>
        <hr />
        <div class="row">
+        
          <?php
           $product_feature = $product->getproduct_feature();
           if ($product_feature) {
             while ($result = $product_feature->fetch_assoc()) {
           ?>
-             <div class="col-12 col-sm-6 col-md-3 ">
-               <div class="card">
+             <div class="col-12 col-sm-6 col-md-3 " style ="padding-bottom: 20px">
+               <div class="card"  >
                  <a href="details.php?product_id=<?= $result['product_id'] ?>"><img src="<?php echo $result['product_thumnail'] ?>" class="card-img-top" alt="..."></a>
                  <div class="card-body">
                    <a href="details.php?product_id=<?= $result['product_id'] ?>">
@@ -62,16 +63,19 @@
                    <p class="price"><?php echo $result['product_price'] . " " . "VNĐ" ?> </p>
                  </div>
                </div>
+              
              </div>
          <?php
             }
           }
           ?>
        </div>
+       
      </div>
    </div>
 
  </div>
+ 
  <?php
 
   include '../src/components/footer.php';
