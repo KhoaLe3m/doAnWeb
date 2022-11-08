@@ -1,7 +1,7 @@
 <?php
 require_once ("order_class.php");
 require_once("order_detail_class.php");
-require_once($_SERVER['DOCUMENT_ROOT'] . "/webUeh/modules/db_module.php");
+require_once "../modules/db_module.php";
 class OrderModel{
     public function getOrdersByUserId($user_id){
         $link = null;
