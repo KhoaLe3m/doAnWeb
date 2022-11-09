@@ -3,7 +3,7 @@ if (count($cart_items) <= 0) {
     echo "<p>Chưa có mặt hàng nào trong giỏ!</p>";
 } else {
     echo '
-    <h1>Giỏ hàng</h1>                
+    <h1 style="text-align:center">Giỏ hàng</h1>                
     <table class="table cart-table">
         <thead>
             <th>STT</th>
