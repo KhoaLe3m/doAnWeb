@@ -21,7 +21,7 @@
 <meta charset="utf-8">
 <title>Login</title>
 	
-    <link rel="stylesheet" type="text/css" href="admin/css/stylelogin.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="css/stylelogin.css" media="screen" />
 </head>
 <body>
 <div class="container">
