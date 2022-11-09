@@ -25,7 +25,7 @@ if (count($cart_items) <= 0) {
         <tr>
             <td>' . $count . '</td>
             <td>
-                <img src="' . $product_thumbnail . '" width="50">
+                <img src="../img/' . $product_thumbnail . '" width="50">
                 <a href="details.php?product_id=' . $item->get_product_id() . '">' . $product_name . '</a>
             </td>
             <td>' . $item->get_product_quantity() . '</td>

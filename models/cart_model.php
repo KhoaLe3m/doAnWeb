@@ -29,7 +29,6 @@ class Cart_Model
             $product = new ProductClass(
                 $rows['product_id'],
                 $rows['product_name'],
-                $rows['product_size'],
                 $rows['product_price'],
                 $rows['product_preview'],
                 $rows['product_thumnail'],

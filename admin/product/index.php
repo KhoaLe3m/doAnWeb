@@ -13,6 +13,7 @@
 </head>
 
 <body>
+    
     <?php
     require_once "../../modules/db_module.php";
     $link = null;
@@ -72,7 +73,7 @@
                         <th><?= $rows['product_id'] ?></th>
                         <th><?= $rows['product_name'] ?></th>
                         <th><?= $rows['product_price'] ?></th>
-                        <th><img src="<?= $rows['product_thumnail'] ?>" alt="" width="150px"></th>
+                        <th><img src="../../img/<?= $rows['product_thumnail'] ?>" width="150px"></th>
                         <th><?= $rows['product_maintenance'] ?></th>
                         <th><?= $rows['product_producer'] ?></th>
                         <th><?= $rows['category_id'] ?></th>

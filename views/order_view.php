@@ -25,7 +25,7 @@ if (count($all_order_details_items) <= 0) {
             <td>' . $count . '</td>
             <td>' . $this->model->getOrderById($item->get_order_id())->get_order_date() . '</td>
             <td>
-                <img src="' . $product_thumbnail . '" width="50">
+                <img src="../img/' . $product_thumbnail . '" width="50">
                 <a href="details.php?product_id=' . $item->get_product_id() . '">' . $product_name . '</a>
             </td>
             <td>' . $item->get_product_quantity() . '</td>
