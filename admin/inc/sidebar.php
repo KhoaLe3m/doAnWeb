@@ -29,10 +29,10 @@
                         <li><a href="catlist.php">Danh sách danh mục</a> </li>
                     </ul>
                 </li>
-                <li><a class="menuitem">Product Option</a>
+                <li><a class="menuitem">Danh sách sản phẩm</a>
                     <ul class="submenu">
-                        <li><a href="addproduct.php">Add Product</a> </li>
-                        <li><a href="productlist.php">Product List</a> </li>
+                        <li><a href="../admin/product/create.php">Thêm sản phẩm</a> </li>
+                        <li><a href="../admin/product/index.php">Danh sách sản phẩm</a> </li>
                     </ul>
                 </li>
                 <li><a class="menuitem">User Profile</a>
