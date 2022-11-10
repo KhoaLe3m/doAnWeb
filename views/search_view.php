@@ -33,7 +33,7 @@
             <div class ="col-12 col-sm-6 col-md-3 "style = "padding-bottom: 20px">
               <div class="card" >
                 <img
-                  src="<?php echo $result['product_thumnail'] ?>"
+                  src="../img/<?php echo $result['product_thumnail'] ?>"
                   class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title" ><a href="details.php?product_id=<?= $result['product_id'] ?>"><?php echo $result['product_name'] ?></a></h5>

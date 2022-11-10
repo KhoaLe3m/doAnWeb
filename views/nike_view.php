@@ -21,9 +21,9 @@
                 <input type="radio" name = "Options" id = "option" value = "ASC"> &nbsp Giá thấp tới cao &nbsp&nbsp
                 <select name="selectname">
                   <option value=" " selected="selected">Loại Giày</option>
-                  <option value="Thể Thao">Thể Thao</option>
-                  <option value="Dã ngoại" >Dã Ngoại</option>
-                  <option value="Thời Trang">Thời Trang</option>
+                  <option value="Giày Bóng Đá">Giày Bóng Đá</option>
+                  <option value="Sneaker" >Sneaker</option>
+                  <option value="Dép quai ngang">Dép quai ngang</option>
                 </select>
                 <input type="submit" value = "Lọc" style = "padding : 0px 10px">
                 <hr>
@@ -31,12 +31,13 @@
             </div>
           <div class="row">
           <?php
+          if($product_new){
               while($result =mysqli_fetch_assoc($product_new)){
             ?>
             <div class ="col-12 col-sm-6 col-md-3 " style = "padding-bottom: 20px">
               <div class="card">
                 <img
-                  src="<?php echo $result['product_thumnail'] ?>"
+                  src="../img/<?php echo $result['product_thumnail'] ?>"
                   class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title" ><a href="details.php?product_id=<?= $result['product_id'] ?>"><?php echo $result['product_name'] ?></a></h5>
@@ -45,7 +46,10 @@
               </div>
             </div>
             <?php
+        }}        else {
+          echo "          <h5>&nbsp&nbsp&nbspKhông có dữ liệu</h5>          ";
         }
+
             ?>
           </div> 
         </div>
