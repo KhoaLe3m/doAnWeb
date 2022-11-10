@@ -20,11 +20,12 @@ class DetailModel
     {
         $link = null;
         taoKetNoi($link);
-        $result = chayTruyVanTraveDL($link, "SELECT * from tbl_review where product_id=$id");
+        $result = chayTruyVanTraveDL($link, "SELECT * from review where product_id='$id'");
         while ($rows = mysqli_fetch_assoc($result)) {
             $review = new Review($rows["product_id"], $rows["review_content"]);
         }
         giaiPhongBonho($link, $result);
         return $review;
     }
+    
 }

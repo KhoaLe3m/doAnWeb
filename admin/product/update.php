@@ -51,7 +51,6 @@ include '../inc/header1.php'; ?>
                     $file_tmp = $_FILES['product_thumnail']['tmp_name'];
                     $fileSize = $_FILES['product_thumnail']['size'];
                     $fileext = pathinfo($fileName, PATHINFO_EXTENSION);
-                    var_dump($fileext);
                     if ($fileSize > 2000000) {
                         $error['product_thumnail'] = "file phải nhỏ hơn 2mb";
                     } elseif (!in_array($fileext, $allowext)) {
