@@ -11,8 +11,6 @@ class DetailController{
         // $reviews = $review->get_review_content();
         
         $product = $this->model->getProduct($id);
-        
-
         include "detail_view.php";
     }
 }

@@ -1,6 +1,5 @@
 <?php
     require_once('../controllers/user_controller.php');
-    UserController ::checkLogin();
     
     require_once("../modules/database.php");
     
