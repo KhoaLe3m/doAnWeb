@@ -7,9 +7,7 @@ class DetailController{
         $this->model = new DetailModel();
     }
     public function product_detail_invoke($id){
-        // $review = $this->model->getReview($id);
-        // $reviews = $review->get_review_content();
-        
+        $review = $this->model->getReview($id);
         $product = $this->model->getProduct($id);
         include "detail_view.php";
     }

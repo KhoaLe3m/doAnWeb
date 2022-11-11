@@ -1,8 +1,10 @@
 <?php
 include '../inc/header1.php'; ?>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-<?php include '../inc/sidebar.php';
 ?>
+<div class = "grid_2">
+    
+</div>
 <div class="grid_10">
     <div class="box round first grid">
         <?php
@@ -19,13 +21,13 @@ include '../inc/header1.php'; ?>
             $rows = mysqli_fetch_assoc($check);
             if ($rows['count'] <= 0) {
                 $_SESSION['status'] = "Xóa sản phẩm thất bại";
-                header("refresh:2,url=index.php");
+                header("refresh:2,url= 'index.php'");
             } else {
                 $sql = "DELETE FROM tbl_product WHERE product_id='$product_id'";
                 $checkNum = chayTruyVanTraVeDL($link, $sql);
                 chayTruyVanKhongTraVeDL($link, $sql);
                 $_SESSION['status'] = "Xóa sản phẩm thành công";
-                header("refresh:2,url=index.php");
+                header("refresh:2,url= 'index.php'");
             }
         }
         ?>
@@ -67,6 +69,7 @@ include '../inc/header1.php'; ?>
                         <th><img src="../../img/<?= $rows['product_thumnail'] ?>" width="150px"></th>
                         <th><?= $rows['product_maintenance'] ?></th>
                         <th><?= $rows['product_producer'] ?></th>
+                        
                         <th><?= $rows['category_id'] ?></th>
                         <th><a onclick="return confirm('Bạn có muốn sửa sản phẩm này?')" href="update.php?product_id=<?= $rows['product_id'] ?>" class="btn btn-primary">Sửa</a></th>
                         <th><a href="?product_id=<?= $rows['product_id'] ?>" class="btn btn-danger delete-btn" onclick="return confirm('Bạn có muốn xóa sản phẩm này?')">Xóa </a></th>

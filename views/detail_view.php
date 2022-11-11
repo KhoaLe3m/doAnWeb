@@ -6,7 +6,7 @@ $p_thumnail = $product->get_product_thumnail();
 $p_producer = $product->get_product_producer();
 $p_maintenance = $product->get_product_maintenance();
 $p_preview = $product->get_product_preview();
-$arr_preview    = explode(";",$p_preview);
+$arr_preview    = explode(";", $p_preview);
 ?>
 <div class="row">
   <div class="col-md-1">
@@ -57,11 +57,11 @@ $arr_preview    = explode(";",$p_preview);
               </li>
               <li>Bảo hành: <?= $p_maintenance . " Ngày" ?></li>
               <form action="add_to_cart.php" method="post">
-              <li>
-                <label for="">Nhập số lượng </label>
-                <input type="number" class="rounded-lg border" name="product_quantity" id="product_quantity">
-                <br>
-              </li>
+                <li>
+                  <label for="">Nhập số lượng </label>
+                  <input type="number" class="rounded-lg border" name="product_quantity" id="product_quantity">
+                  <br>
+                </li>
                 <input type="hidden" name="product_id" value="<?= $p_id ?>">
                 <button type="submit" class="btn btn-danger">
                   <i class="fa fa-shopping-cart"></i>
@@ -75,72 +75,12 @@ $arr_preview    = explode(";",$p_preview);
           <div class="col-sm-12" style="line-height: 35px ;">
             <h1>MÔ TẢ SẢN PHẨM</h1>
             <hr>
-            <p> Đôi giày màu trắng là một phụ kiện "phải có" trong tủ đồ của các bạn trẻ. Bởi tính ứng dụng cao
-              trong thời trang, giày trắng thường giúp chúng ta dễ phối đồ hơn và có thể mang phù hợp với bất cứ
-              dịp nào (đi học, đi chơi, ...). 365.giay.store đảm bảo mang lại cho các bạn một đôi giày trắng vừa
-              xinh vừa hời. Ngại gì không tậu ngay một đôi nào!!</p>
-
-            <h3>- THÔNG TIN SẢN PHẨM: </h3>
-            <ul>
-              <li>+ Chất liệu giày: da sần, da trơn nhẵn.</li>
-              <li>+ Màu: trắng</li>
-              <li>+ Size: từ 36 đến 43 (các bạn tham khảo thêm bảng size để chọn được một đôi giày ưng ý nhất nhé)
-              </li>
-              <li>+ Chiều cao: đế cao 2,5 cm</li>
-              <li>+ Trọng lượng Giày : 800g</li>
-            </ul>
+            <?= $review->get_review_content() ?>
           </div>
         </div>
         <div class="row">
           <div class="col-sm-12 ">
-            <h2>SẢN PHẨM TƯƠNG TỰ</h2>
             <hr />
-            <div class="row">
-              <div class="col-sm-6 col-12 col-md-3 position-relative">
-                <div class="card float-left mr-3 mt-3 ml-2 w-100" style="font-size: 16px; ">
-                  <img src="https://myshoes.vn/image/cache/catalog/nike/25.10/giay-Nike-Renew-Retaliation-TR-2-01-550x550.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h6 class="card-title">GIÀY NIKE FREE METCON 4 NAM - ĐEN TRẮNG</h6>
-                    <p class="card-text">Giày vjp</p>
-                    <a href="#" class="btn btn-primary " style="bottom: 15px;"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Đặt
-                      Hàng</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-6 col-12 col-md-3 position-relative">
-                <div class="card float-left mr-3 mt-3 ml-2 w-100" style="font-size: 16px;">
-                  <img src="https://myshoes.vn/image/cache/catalog/nike/25.10/giay-Nike-Renew-Retaliation-TR-2-01-550x550.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h6 class="card-title">GIÀY NIKE FREE METCON 4 NAM - ĐEN TRẮNG</h6>
-                    <p class="card-text">Giày vjp</p>
-                    <a href="#" class="btn btn-primary"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Đặt
-                      Hàng</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-6 col-12 col-md-3 position-relative">
-                <div class="card float-left mr-3 mt-3 ml-2 w-100" style="font-size: 16px;">
-                  <img src="https://myshoes.vn/image/cache/catalog/nike/25.10/giay-Nike-Renew-Retaliation-TR-2-01-550x550.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h6 class="card-title">AIR FORCE 1 SUNFLOWER</h6>
-                    <p class="card-text">Giày vjp</p>
-                    <a href="#" class="btn btn-primary  "><i class="fa fa-shopping-cart" aria-hidden="true"></i> Đặt
-                      Hàng</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-6 col-12 col-md-3 position-relative">
-                <div class="card float-left mr-3 mt-3 ml-2 w-100" style="font-size: 16px;">
-                  <img src="https://myshoes.vn/image/cache/catalog/nike/25.10/giay-Nike-Renew-Retaliation-TR-2-01-550x550.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h6 class="card-title">GIÀY NIKE FREE METCON 4 NAM - ĐEN TRẮNG</h6>
-                    <p class="card-text">Giày vjp</p>
-                    <a href="#" class="btn btn-primary "><i class="fa fa-shopping-cart" aria-hidden="true"></i> Đặt
-                      Hàng</a>
-                  </div>
-                </div>
-              </div>
-            </div>
             <br style="clear: both;">
             <div class="row ">
               <div class="col-sm-12">
