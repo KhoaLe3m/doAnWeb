@@ -1,6 +1,9 @@
 <?php
     require_once('../controllers/user_controller.php');
+<<<<<<< HEAD
     
+=======
+>>>>>>> ffd3eb0bd797b5a7467df86108982425ede0c32e
     
     require_once("../modules/database.php");
     
