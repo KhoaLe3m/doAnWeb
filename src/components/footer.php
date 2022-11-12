@@ -9,16 +9,16 @@
               Products
             </h6>
             <p>
-              <a href="adidas.php" class="text-reset">Adidas</a>
+              <a href="adidas_view.php" class="text-reset">Adidas</a>
             </p>
             <p>
-              <a href="nike.php" class="text-reset">Nike</a>
+              <a href="nike_view.php" class="text-reset">Nike</a>
             </p>
             <p>
-              <a href="jordan.php" class="text-reset">Jordan</a>
+              <a href="jordan_view.php" class="text-reset">Jordan</a>
             </p>
             <p>
-              <a href="yeezy.php" class="text-reset">Yeezy</a>
+              <a href="yeezy_view.php" class="text-reset">Yeezy</a>
             </p>
           </div>
           <div class="col-md-4 col-lg-2 col-xl-2 mx-auto mb-4">

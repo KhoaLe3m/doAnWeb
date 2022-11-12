@@ -28,7 +28,7 @@
 	<section id="content">
 		<form action="login.php" method="post">
 			<h1>Admin Login</h1>
-			<span>
+			<span class = 'error'>
                     <?php
                     if(isset($login_check)){
                         echo $login_check;
@@ -44,11 +44,11 @@
 			<div>
 				<input type="submit" value="Log in" />
 			</div>
-		</form><!-- form -->
+		</form>
 		<div class="button">
 			<a href="#"></a>
-		</div><!-- button -->
-	</section><!-- content -->
-</div><!-- container -->
+		</div>
+	</section>
+</div>
 </body>
 </html>

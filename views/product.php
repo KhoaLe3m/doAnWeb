@@ -18,7 +18,7 @@
         public function getproduct_feature()
         {
             
-            $query = "SELECT * FROM tbl_product ";
+            $query = "SELECT * FROM tbl_product limit 12 ";
             $result = $this->db->select($query);
            
             return $result;
